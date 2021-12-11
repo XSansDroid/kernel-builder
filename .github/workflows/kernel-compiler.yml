@@ -1,0 +1,21 @@
+name: Building Kernel
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container: 
+      image: zycromerz/kerneldocker:v3
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Compile Kernel
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+      run: |
+        wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/startBuild
+        bash startBuild beta proton
