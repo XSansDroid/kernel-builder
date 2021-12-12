@@ -18,4 +18,4 @@ jobs:
         CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
       run: |
         wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/startBuild
-        bash startBuild beta proton
+        bash startBuild stable proton
