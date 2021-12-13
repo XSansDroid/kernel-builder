@@ -1,6 +1,7 @@
-name: Building Kernel
+name: Building NTR Kernel
 
-on: [push]
+on: 
+  workflow_dispatch:
 
 jobs:
   build:
@@ -12,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Compile Kernel
+    - name: Compile NTR Kernel
       env:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
