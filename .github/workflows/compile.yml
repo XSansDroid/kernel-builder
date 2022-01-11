@@ -1,0 +1,25 @@
+name: Building Weeb Kernel
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container: 
+      image: zycromerz/kerneldocker:v3
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Compile Weeb Kernel
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+        CODENAME: ${{ secrets.CODENAME }}
+        K_BRANCH: ${{ secrets.K_BRANCH }}
+        TOKED: ${{ secrets.TOKED }}
+      run: |
+        wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/doBuild
+        bash doBuild stable clang14-llvm
