@@ -1,6 +1,7 @@
 name: Building Weeb Kernel
 
-on: [push]
+on: 
+  workflow_dispatch:
 
 jobs:
   build:
