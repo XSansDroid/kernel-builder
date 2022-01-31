@@ -21,5 +21,5 @@ jobs:
         K_BRANCH: ${{ secrets.K_BRANCH }}
         TOKED: ${{ secrets.TOKED }}
       run: |
-        wget https://raw.githubusercontent.com/XSans02/CI_Script/main/vayu/doBuild
-        bash doBuild stable clang14-llvm
+        wget https://raw.githubusercontent.com/XSans02/my-script/kernel/vayu/doBuild
+        bash doBuild stable clang14
