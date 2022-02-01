@@ -20,6 +20,9 @@ jobs:
         CODENAME: ${{ secrets.CODENAME }}
         K_BRANCH: ${{ secrets.K_BRANCH }}
         TOKED: ${{ secrets.TOKED }}
+        RELEASE: ${{ secrets.RELEASE }}
+        TC: ${{ secrets.TC }}
+        COMPILE: ${{ secrets.COMPILE }}
       run: |
         wget https://raw.githubusercontent.com/XSans02/my-script/kernel/vayu/doBuild
-        bash doBuild stable clang14
+        bash doBuild
