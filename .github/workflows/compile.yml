@@ -23,6 +23,9 @@ jobs:
         RELEASE: ${{ secrets.RELEASE }}
         TC: ${{ secrets.TC }}
         COMPILE: ${{ secrets.COMPILE }}
+        DOUBLE_DTB: ${{ secrets.DOUBLE_DTB }}
       run: |
         wget https://raw.githubusercontent.com/XSans02/my-script/kernel/vayu/doBuild
+        wget https://raw.githubusercontent.com/XSans02/my-script/kernel/vayu/personal
+        wget https://raw.githubusercontent.com/XSans02/my-script/kernel/vayu/x-personal
         bash doBuild
