@@ -1,4 +1,4 @@
-name: Building Weeb Kernel
+name: Building Kernel
 
 on: 
   workflow_dispatch:
@@ -13,11 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Compile Weeb Kernel
+    - name: Building Kernel
       env:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-        CODENAME: ${{ secrets.CODENAME }}
         K_BRANCH: ${{ secrets.K_BRANCH }}
         TOKED: ${{ secrets.TOKED }}
         RELEASE: ${{ secrets.RELEASE }}
