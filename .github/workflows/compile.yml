@@ -18,7 +18,7 @@ jobs:
         GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
         TC: ${{ secrets.TC }}
       run: |
-        sudo apt update -y && sudo apt upgrade -y
+        sudo apt update -y && sudo apt upgrade -y && sudo apt install python2 -y
         git clone --depth=1 -b $KBRANCH https://"$GIT_TOKEN":x-oauth-basic@github.com/XSans0/kernel_xiaomi_vayu kernel
         cd kernel
         wget https://raw.githubusercontent.com/XSans0/my-script/main/ci/build.sh
