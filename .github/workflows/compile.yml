@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Start Build
       env:
-        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        CHID: ${{ secrets.CHID }}
+        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+        CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
         KBRANCH: ${{ secrets.KBRANCH }}
         GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
         TC: ${{ secrets.TC }}
