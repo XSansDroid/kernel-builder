@@ -8,20 +8,18 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    container: 
-      image: zycromerz/kerneldocker:v3
-
     steps:
     - uses: actions/checkout@v2
-    - name: Building Kernel
+    - name: Start Build
       env:
-        TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
-        CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-        K_BRANCH: ${{ secrets.K_BRANCH }}
-        TOKED: ${{ secrets.TOKED }}
-        RELEASE: ${{ secrets.RELEASE }}
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        CHID: ${{ secrets.CHID }}
+        KBRANCH: ${{ secrets.KBRANCH }}
+        GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
         TC: ${{ secrets.TC }}
-        COMPILE: ${{ secrets.COMPILE }}
       run: |
-        wget https://raw.githubusercontent.com/XSans02/my-script/kernel/vayu/doBuild
-        bash doBuild
+        sudo apt update -y && sudo apt upgrade -y
+        git clone --depth=1 -b $KBRANCH https://"$GIT_TOKEN":x-oauth-basic@github.com/XSans0/kernel_xiaomi_vayu kernel
+        cd kernel
+        wget https://raw.githubusercontent.com/XSans0/my-script/main/ci/build.sh
+        bash build.sh
