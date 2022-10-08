@@ -8,8 +8,8 @@ task:
   timeout_in: 2h
   container:
       image: panchajanya1999/archlinux:latest
-      cpu: 4
-      memory: 16G
+      cpu: 8
+      memory: 32G
 
   Build_script:
       - echo "LC_ALL=en_US.UTF-8" | sudo tee -a /etc/environment
