@@ -2,7 +2,7 @@ task:
   environment:
     TELEGRAM_TOKEN: ENCRYPTED[!94fbd2d08de5b1a873f120ff1dde676de27ae81893c86a8393ad389227123de22ddf77b3e9c345f32892ba347fb82477!]
     TELEGRAM_CHAT: ENCRYPTED[!cb55d5185ebb9d6b6dff8d585e44d9bd8f31f0eb996167a4ccebad7a19749b474c31de5ac877c7a4941601b6388827ae!]
-    TC: weebx14
+    TC: proton
     
   name: Build Kernel
   timeout_in: 2h
