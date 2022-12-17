@@ -17,4 +17,4 @@ task:
       - echo "LANG=en_US.UTF-8" | sudo tee -a /etc/locale.conf
       - sudo locale-gen en_US.UTF-8
       - wget https://raw.githubusercontent.com/XSans0/my-script/main/ci/build.sh
-      - bash build.sh next
+      - bash build.sh f2fs-4.19-backport
