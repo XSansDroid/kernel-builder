@@ -14,10 +14,9 @@ jobs:
       env:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         TELEGRAM_CHAT: ${{ secrets.TELEGRAM_CHAT }}
-        KBRANCH: ${{ secrets.KBRANCH }}
-        GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
-        TC: ${{ secrets.TC }}
+        BRANCH: ${{ secrets.BRANCH }}
+
       run: |
-        sudo apt update && sudo apt upgrade -y && sudo apt install python2 -y
-        wget https://raw.githubusercontent.com/XSans0/my-script/main/ci/build.sh
-        bash build.sh ${KBRANCH}
+        sudo apt update && sudo apt upgrade -y
+        wget https://raw.githubusercontent.com/XSans0/my-script/main/build.sh
+        bash build.sh
